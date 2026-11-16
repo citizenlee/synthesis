@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------
+# Abandoned HyperFrames scaffold.
+# The first attempt at this film was hand-drawn HTML/SVG rendered by the
+# HyperFrames CLI. It was dropped in favour of the generative pipeline in
+# anvil/. The files are still on disk locally; they are not part of this repo.
+# ---------------------------------------------------------------------------
+/.hyperframes/
+/.thumbnails/
+/assets/
+/compositions/
+/renders/
+/index.html
+/hyperframes.json
+/meta.json
+/package.json
+/SPEC.md
+/STORYLINES.md
+/REVIEW.md
+/CLAUDE.md
+/AGENTS.md
+
+# ---------------------------------------------------------------------------
+# Build artifacts and intermediates. Everything here is reproducible from
+# anvil/frames + anvil/clips by running bin/assemble.sh.
+# ---------------------------------------------------------------------------
+anvil/segs/
+anvil/plates/
+anvil/out/cut.mp4
+anvil/out/titled.mp4
+anvil/clips/_old-*.mp4
+anvil/clips/tasks.json
+anvil/clips/*.log
+
+.DS_Store
