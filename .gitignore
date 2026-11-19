@@ -32,3 +32,10 @@ anvil/clips/tasks.json
 anvil/clips/*.log
 
 .DS_Store
+
+# ---------------------------------------------------------------------------
+# Launch-video working copies (plan lives in video/; media stays local).
+# ---------------------------------------------------------------------------
+video/footage/raw/
+video/out/
+video/music/
