@@ -1,0 +1,197 @@
+    The Benchtop Nucleic Acid Synthesis Device Landscape
+                    Preliminary Findings
+
+         Ivet A. Yordanova 1, Kirsten Engel 2, Mayra Ameneiros 1, Gary Abel 3,4, Tessa Alexanian 1*
+
+1
+  International Biosecurity and Biosafety Initiative for Science (IBBIS), Geneva, Switzerland
+2
+  SecureDNA Foundation, Geneva, Switzerland
+3
+  Fourth Eon Biosecurity Institute, Berkeley, CA, United States
+4
+  The Johns Hopkins Center for Health Security, Baltimore, MD, United States
+
+* Corresponding author: hello@tessa.fyi
+
+
+Background
+Benchtop nucleic acid synthesis devices provide rapid, decentralized access to synthetic DNA and
+are used by life sciences research labs, academic core facilities, pharmaceutical companies,
+diagnostic laboratories, and small-scale mail-order synthesis companies1. Given the dual-use
+potential of synthetic DNA, recent policy proposals have called for extending sequence and
+customer screening obligations from centralized commercial synthesis providers to manufacturers
+of benchtop synthesis devices. However, the challenges of adapting screening to benchtop devices
+have yet to be adequately addressed2.
+These preliminary findings summarize our survey of the benchtop nucleic acid synthesis
+landscape, examining all benchtop devices that are currently available, under development, or
+discontinued. Our forthcoming report will provide more detail on benchtop device types and
+capabilities, map the global distribution of manufacturers, assess regulatory and policy definitions
+of benchtop devices, and compare technical safeguards. We expect this comprehensive
+assessment of the benchtop nucleic acid synthesis landscape will provide valuable insights to
+guide the development of effective policy frameworks and technical safeguards, supporting the
+responsible adoption of these technologies while addressing emerging biosecurity risks.
+
+Current landscape of benchtop synthesis devices
+Commercially available nucleic acid synthesis devices come in a range of sizes, from small to large
+benchtop instruments and floor-standing systems (Fig. 1A). While most benchtop devices employ
+either chemical phosphoramidite-based synthesis or enzymatic synthesis, a variety of other
+formats exist (Fig. 1B). Phosphoramidite-based systems include conventional column- or
+well-based formats as well as array-based approaches, in which synthesis sites may be addressed
+using electrochemical control, droplet deposition, photolithographic deprotection, or other
+localized reactions. Enzymatic synthesis represents an alternative approach based on nucleotide
+incorporation by enzymes such as engineered terminal deoxynucleotidyl transferase3-6. Analysis of
+available device specifications and synthesis capacities shows that array-based devices have the
+highest synthesis throughput capabilities, evidenced by their ability to synthesize as many as 1.5
+billion unique nucleotides across up to 4,350,000 sites per run (Fig. 1C, D).
+
+
+
+
+13 November 2026 | Version 1.0​            ​        ​        ​       ​        ​        ​        ​     1
+ Figure 1. Benchtop synthesis devices and capabilities. (A) Simplified illustration of benchtop formats,
+ showing the range from small research-scale devices to floor-standing production-scale synthesizers.
+ (B) Simplified illustration of the main synthesis formats for current devices: conventional column or
+ well-based phosphoramidite synthesis, enzymatic synthesis, or array-based chemistry, which may be
+ addressed using several different strategies. (C) Violin plot of synthesis capacity of benchtop devices,
+ grouped by device class and expressed as the number of unique nucleotides synthesized per run (log₁₀
+ scale), which is calculated as the throughput multiplied by the maximum sequence length in nucleotides.
+ (D) Scatter plot of the maximum throughput per run multiplied by the maximum sequence length. Each
+ point in C and D represents one device model (n = 83). Devices for which capacity could not be derived
+ from publicly available specifications are not shown (n = 197).
+
+
+13 November 2026 | Version 1.0​           ​       ​        ​       ​         ​      ​        ​          2
+Among the benchtop synthesis devices identified in this survey, device manufacturers were
+headquartered across eleven countries: Austria, Canada, China, Denmark, France, Germany,
+Japan, Russia, Sweden, the United Kingdom, and the United States (USA). Among these, China
+(31.8%), the USA (25%), and Japan (11.8%) contribute the highest numbers of benchtop device
+models, while the total share across the EU is 16.8% (Fig. 2A).
+The first benchtop synthesis devices released on the market in the 1980s relied predominantly on
+conventional phosphoramidite chemistry for DNA synthesis. In the decade from 2006 to 2015, an
+average of 3.7 new benchtop device models emerged annually. The release rate has since
+increased significantly, with an average of 9.3 new models per year in the following decade from
+2016 to 2025 (Fig. 2B). Though the exact release date was not publicly available for every model,
+our comprehensive analysis of publicly available data found that an estimated total of 280 device
+models have been introduced since the early 1980s, 102 of which have since been discontinued
+from production.
+
+
+
+
+ Figure 2. The global benchtop nucleic acid synthesis device landscape. (A) Pie chart of the country where
+ the manufacturer is headquartered for benchtop devices included in the report (n = 280). (B) Stacked bar
+ chart of the number of benchtop device models released per year, coloured by device class (n = 166).
+ Devices still in development (n = 27) are shown on the right side of the bar chart. "Other" denotes devices
+ using synthesis chemistry other than phosphoramidite and enzymatic, or whose synthesis method has
+ not been disclosed. Devices with no publicly available release date (n = 87) are not shown.
+
+
+Safeguarding benchtop synthesis devices
+Currently, there are no international regulatory requirements or consensus best practices for
+benchtop device biosecurity2. The November 2026 US National Policy for Nucleic Acid Synthesis
+Screening establishes obligations for device manufacturers and calls for the creation of technical
+standards for synthesis screening on benchtop devices, including the form, issuance,
+cryptographic verification, physical security, and validity of authorization issued by verified
+screening tools to individual benchtop devices7.
+Safeguards for benchtop devices can be implemented through a layered approach encompassing
+know-your-customer (KYC) screening, operator-device interactions, software and hardware
+controls, and record-keeping mechanisms (Fig. 3).
+
+
+
+
+13 November 2026 | Version 1.0​            ​        ​       ​        ​         ​       ​       ​           3
+   ●​ KYC screening: In addition to KYC checks at the point of device purchase or transfer,
+      proprietary consumables (reagents, kits, cartridges) create additional opportunities for
+      ongoing customer or site verification, including for devices sold to third parties.
+   ●​ Operator-device interactions: Device use can be secured by ensuring users are uniquely
+      authenticated through tiered licensing and multi-factor authentication, pairing licenses for
+      individual access levels with cryptographic credentials or electronic signatures. KYC may
+      be used to set a default tier on each device.
+   ●​ Software controls: Synthesis requests can then be authorized using networked
+      authorization or “phone-home” screening (requiring careful secure handling of proprietary
+      sequences)8 or offline screening (requiring careful secure handling of screening databases
+      and software updates).
+   ●​ Hardware controls: Software-only screening and authorization can be bypassed unless
+      devices implement hardware safeguards. For example, secure boot backed by a hardware
+      root of trust can ensure that firmware and low-level controllers for electronics, fluidics, and
+      thermal modules execute only signed jobs, preventing untrusted actuation of synthesis
+      hardware. Additionally, tamper-proofing mechanisms could be used to detect
+      unauthorized physical access to device components, triggering lockout or requiring
+      inspection to resume operation.
+   ●​ Record-keeping: At either a hardware or software level, devices can implement an audit
+      log to enable attribution of sequences synthesized on a device9 and automated reporting
+      to ensure that attempts to tamper with equipment to avoid screening are flagged.
+Prioritizing among these safeguards will require careful consideration of the advantages,
+limitations, and costs of different approaches.
+
+
+
+
+ Figure 3. Graphical summary of proposed on-device safeguards for benchtop synthesis devices.
+ Safeguards could be layered across device reagents, purchasers and end-users (customers), software, and
+ device hardware.
+
+Conclusion
+Benchtop synthesis devices are proliferating across a growing set of manufacturers, jurisdictions,
+and synthesis methods, and their throughput now approaches scales previously only available
+from mail-order synthesis providers. The full report and associated dataset will give
+manufacturers, screening tool providers, policymakers, and biosecurity advocates a shared
+understanding of the benchtop synthesis landscape, helping to inform the development of
+effective technical safeguards and policy frameworks.
+
+
+13 November 2026 | Version 1.0​          ​        ​       ​        ​        ​       ​       ​          4
+Disclaimers
+
+The data for this publication was obtained exclusively from publicly available sources at the time of the
+research. No non-public, confidential, proprietary, or otherwise restricted information was relied upon for
+this work. This research was not undertaken in partnership or collaboration with any manufacturer identified
+or referenced herein. The inclusion of or reference to any company, product, or service does not imply that
+such company participated in or endorsed this publication, nor does it imply endorsement of any company,
+product, or service by the authors or their institutions.
+
+The illustrations in Figures 1 and 3 were created using Claude-Opus-5 (Anthropic) based on data and
+reference sketches provided by the authors. The raw data provided in Fig. 1 and Fig. 2 were analyzed and
+visualized in RStudio. All the data analysis scripts will be made available by the authors on a public-access
+GitHub repository when the full report is published.
+
+
+
+Request the data
+
+The complete benchtop device dataset is available upon request for legitimate use. To request access to the
+data informing this study, please email dataaccess@ibbis.bio. You will receive an application form, and your
+request will be reviewed through a managed access process administered by IBBIS.
+
+
+
+References
+
+1.​ OligoMaker ApS. Customer cases. OligoMaker https://oligomaker.com/customer-cases/ (2024).
+2.​ Langenkamp, M. Securing benchtop DNA synthesizers. Institute for Progress
+    https://ifp.org/securing-benchtop-dna-synthesizers (2024).
+3.​ Roy, S. & Caruthers, M. Synthesis of DNA/RNA and their analogs via phosphoramidite and H-phosphonate
+    chemistries. Molecules 18, 14268–14284 (2013). https://doi.org/10.3390/molecules181114268
+4.​ Forget, S. M. et al. Evolving a terminal deoxynucleotidyl transferase for commercial enzymatic DNA
+    synthesis. Nucleic Acids Res. 53, gkaf115 (2025). https://doi.org/10.1093/nar/gkaf115
+5.​ Egeland, R. D. & Southern, E. M. Electrochemically directed synthesis of oligonucleotides for DNA
+    microarray fabrication. Nucleic Acids Res. 33, e125 (2005). https://doi.org/10.1093/nar/gni117
+6.​ Holden, M. T. et al. Photolithographic synthesis of high-density DNA and RNA arrays on flexible,
+    transparent, and easily subdivided plastic substrates. Anal. Chem. 87, 11420–11428 (2015).
+    https://doi.org/10.1021/acs.analchem.5b02893
+7.​ White House. “National Policy for Nucleic Acid Synthesis Screening.” Memorandum NSTM-6, November 5,
+    2026. https://www.whitehouse.gov/wp-content/uploads/2026/11/NSTM-6-NASS-Policy.pdf.
+8.​ Carter, S. R., Yassif, J. M., & Isaac, C. R. Benchtop DNA Synthesis Devices: Capabilities, Biosecurity
+    Implications, and Governance. Nuclear Threat Initiative.
+    https://www.nti.org/analysis/articles/benchtop-dna-synthesis-devices-capabilities-biosecurity-implicati
+    ons-and-governance/ (2023).
+9.​ Baker, D. & Church, G. Protein design meets biosecurity. Science 383, 349 (2024).
+    https://doi.org/10.1126/science.ado1671
+
+
+
+
+13 November 2026 | Version 1.0​             ​        ​        ​       ​          ​      ​        ​         5
+

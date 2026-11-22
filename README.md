@@ -1,3 +1,14 @@
+# Synthesis
+
+This repository holds a nucleic-acid-synthesis idea explored as a film, not as a company. What exists today is **ANVIL**: a 46.7-second photorealistic launch film for a machine that does not exist, plus the generative pipeline that built it.
+
+Also in this repo:
+
+- [Benchtop nucleic acid synthesis device landscape (IBBIS, Nov 2026)](research/benchtop-synthesis-landscape/) — whitepaper, text extraction, thread figures, and notes from [Tessa Alexanian's X thread](https://x.com/tessafyi/status/2122982286085800338).
+- [Launch-video plan](video/) — a 90–120 s Story-style cut with VO, distinct from the silent ANVIL film.
+
+---
+
 # ANVIL
 
 A 46.7-second photorealistic launch film for a machine that does not exist.
