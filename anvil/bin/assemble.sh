@@ -2,6 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 FPS=24; ENC="-c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p -r $FPS"
+mkdir -p segs out
 
 # 1. trim each shot to its cut length
 trim () { # clip in dur out
